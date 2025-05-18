@@ -1,7 +1,7 @@
 # 👋 Intro
 • Bachelor of Technology in Computer Science at Vellore Institute of Technology, Chennai, India (2024) <br>
-• Master of Applied Computer Science at Concordia Univeristy, Montreal, Canada (Expected 2026)
-• Have a deep interest in Software Development (React/TypeScript & Java/.NET), ML model development and fine-tuning
+• Master of Applied Computer Science at Concordia Univeristy, Montreal, Canada (Expected 2026) <br>
+• Have a deep interest in Software Development (React/TypeScript & Java/.NET), ML model development and fine-tuning <br>
 • [![Hugging Face](https://img.shields.io/badge/HuggingFace-%23000000.svg?style=for-the-badge&logo=huggingface&logoColor=yellow)](https://huggingface.co/Sujith013)
 
 # 💼 <b>Experience</b>
