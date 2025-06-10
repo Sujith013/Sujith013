@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --main-color: #4ade80;
+      --bg-color: #0f172a;
+      --text-color: #f8fafc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--main-color);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about, .projects, .contact {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .project h3 {
+      color: var(--main-color);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .project-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .project-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Hello, I'm Sujith 👋</h1>
+    <p>A passionate full-stack developer</p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a software developer with a focus on clean code, intuitive design, and performance.
+      I love working on full-stack projects that solve real-world problems.
+    </p>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Finance Dashboard</h3>
+        <p>A full-stack application for financial reporting using React, .NET, and SQL.</p>
+      </div>
+      <div class="project">
+        <h3>Patient Health Portal</h3>
+        <p>Scala-based health dashboard with real-time metrics and patient tracking.</p>
+      </div>
+      <div class="project">
+        <h3>AI Voice Transcriber</h3>
+        <p>FastAPI backend with React frontend to transcribe audio using Whisper API.</p>
+      </div>
+      <div class="project">
+        <h3>Game Dev Portfolio</h3>
+        <p>Collection of Unity and Phaser games with responsive UI and animation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: youremail@example.com</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--main-color);">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank" style="color: var(--main-color);">github.com/yourusername</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Sujith M. Built with HTML & CSS 💻</p>
+  </footer>
+</body>
+</html>
