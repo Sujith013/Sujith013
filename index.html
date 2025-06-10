@@ -8,8 +8,8 @@
   <style>
     :root {
       --main-color: #4ade80;
-      --bg-color: #0f172a;
-      --text-color: #f8fafc;
+      --bg-color: #000000;
+      --text-color: #ffffff;
     }
 
     * {
@@ -33,6 +33,17 @@
       animation: fadeInDown 1s ease forwards;
     }
 
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid var(--main-color);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease forwards;
+    }
+
     header h1 {
       font-size: 3rem;
       color: var(--main-color);
@@ -40,44 +51,48 @@
 
     header p {
       font-size: 1.2rem;
-      opacity: 0.8;
+      opacity: 0.9;
     }
 
     section {
       padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .about, .projects, .contact {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #111111;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
       opacity: 0;
       transform: translateY(30px);
       animation: fadeInUp 1s ease forwards;
-      animation-delay: 0.5s;
     }
 
-    .project-list {
-      display: grid;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .project {
-      background: #1e293b;
-      padding: 1.5rem;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 0.8s ease forwards;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    .project h3 {
+    section h2 {
       color: var(--main-color);
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+    }
+
+    .project-detail {
+      font-size: 1rem;
+      color: #cccccc;
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -116,14 +131,9 @@
         font-size: 2.2rem;
       }
 
-      .project-list {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .project-list {
-        grid-template-columns: repeat(2, 1fr);
+      section {
+        padding: 3rem 1rem;
+        margin: 2rem 1rem;
       }
     }
   </style>
@@ -131,6 +141,8 @@
 
 <body>
   <header>
+    <!-- Replace src with your image URL or path -->
+    <img src="your-image.jpg" alt="Your Profile Picture" class="profile-img" />
     <h1>Hello, I'm Sujith 👋</h1>
     <p>A passionate full-stack developer</p>
   </header>
@@ -143,33 +155,48 @@
     </p>
   </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project">
-        <h3>Finance Dashboard</h3>
-        <p>A full-stack application for financial reporting using React, .NET, and SQL.</p>
-      </div>
-      <div class="project">
-        <h3>Patient Health Portal</h3>
-        <p>Scala-based health dashboard with real-time metrics and patient tracking.</p>
-      </div>
-      <div class="project">
-        <h3>AI Voice Transcriber</h3>
-        <p>FastAPI backend with React frontend to transcribe audio using Whisper API.</p>
-      </div>
-      <div class="project">
-        <h3>Game Dev Portfolio</h3>
-        <p>Collection of Unity and Phaser games with responsive UI and animation.</p>
-      </div>
+  <!-- Projects as separate sections -->
+  <section id="finance-dashboard" class="project">
+    <h2>Finance Dashboard</h2>
+    <p>A full-stack application for financial reporting using React, .NET, and SQL.</p>
+    <div class="project-detail">
+      <p><strong>Details:</strong> This dashboard displays financial metrics, charts, and reports in real time. It integrates React for frontend interactivity, a .NET backend API for data processing, and SQL Server for secure data storage.</p>
+      <p>Features include user authentication, role-based access, and export options for reports.</p>
+    </div>
+  </section>
+
+  <section id="patient-health-portal" class="project">
+    <h2>Patient Health Portal</h2>
+    <p>Scala-based health dashboard with real-time metrics and patient tracking.</p>
+    <div class="project-detail">
+      <p><strong>Details:</strong> Built using Scala and SBT, this portal allows healthcare providers to monitor patient vitals and history in real time. It supports data visualization and alerts for critical health events.</p>
+      <p>The system emphasizes scalability and security compliance with healthcare standards.</p>
+    </div>
+  </section>
+
+  <section id="ai-voice-transcriber" class="project">
+    <h2>AI Voice Transcriber</h2>
+    <p>FastAPI backend with React frontend to transcribe audio using Whisper API.</p>
+    <div class="project-detail">
+      <p><strong>Details:</strong> This project provides a web interface to upload audio files and get accurate text transcriptions leveraging OpenAI's Whisper model. The backend uses FastAPI for fast response and scalability.</p>
+      <p>The frontend offers progress feedback and easy download options.</p>
+    </div>
+  </section>
+
+  <section id="game-dev-portfolio" class="project">
+    <h2>Game Dev Portfolio</h2>
+    <p>Collection of Unity and Phaser games with responsive UI and animation.</p>
+    <div class="project-detail">
+      <p><strong>Details:</strong> This portfolio showcases multiple games developed using Unity (C#) and Phaser (JavaScript). Each game features smooth controls, attractive graphics, and responsive design.</p>
+      <p>Includes game demos, source code links, and detailed design documentation.</p>
     </div>
   </section>
 
   <section class="contact">
     <h2>Contact Me</h2>
     <p>Email: youremail@example.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--main-color);">linkedin.com/in/yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank" style="color: var(--main-color);">github.com/yourusername</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
   </section>
 
   <footer>
