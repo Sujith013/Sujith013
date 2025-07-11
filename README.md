@@ -83,6 +83,9 @@
 
 ---
 
+
+
+
 # 💼 <b>Experience</b>
 • Research Intern under a professor at University of Technology Sydney (Machine Learning and Natural Language Processing) <br>
 • Teaching Assistant at Concordia Univeristy for the course of COMP 249 (Object Oriented Programming II)
