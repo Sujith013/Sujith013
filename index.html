@@ -120,12 +120,12 @@
 
         <div class="project">
           <h4>ASR for Indian Languages <a href="https://github.com/Sujith013/Automatic-Speech-Recognition-in-Indic-Languages-with-enhanced-Spell-Checker-using-MLM/blob/main/ACM Transaction Paper.pdf" target="_blank">Github Repo →</a> </h4>
-          <p>I developed an advanced automatic speech recognition (ASR) pipeline tailored for four low-resource Indian languages by fine-tuning OpenAI’s Whisper-medium model. To overcome high word error rates typical for dialectal variations and noisy audio, I implemented an ensemble correction module combining a masked language model (XLM-RoBERTa) for context-aware predictions and fine-grained word-level alignment using Difflib. The result reduced the average WER from 42% to 35%. The complete system included robust REST APIs built with FastAPI and Flask, containerized with Docker, and deployed on Google Cloud Platform following MLOps best practices.</p>
+          <p>I developed an advanced automatic speech recognition (ASR) pipeline tailored for four low-resource Indian languages by fine-tuning OpenAI’s Whisper-medium model. To overcome high word error rates typical for dialectal variations and noisy audio, I implemented an ensemble correction module combining a masked language model (XLM-RoBERTa) for context-aware predictions and fine-grained word-level alignment using Difflib. The result reduced the average WER from 42% to 35%. The complete system included robust REST APIs built with FastAPI and Flask, containerized with Docker, and deployed on AWS (S3, Cloudfront and ECS) following MLOps best practices.</p>
           <h5 class="tech-stack">
   <span>PyTorch</span>
   <span>MLM</span>
   <span>Whisper</span>
-  <span>GCP</span>
+  <span>AWS</span>
   <span>Docker</span>
   <span>React</span>
   <span>FastAPI</span>
@@ -156,16 +156,17 @@
 
         <div class="project">
           <h4>Finance Portfolio System  <a href="https://github.com/Sujith013/Finance-System" target="_blank">Github Repo →</a></h4>
-          <p>I designed and developed a responsive full-stack finance application that helps users track real-time stock market trends and manage personalized investment portfolios. The frontend was built with React, TypeScript, and Tailwind CSS for clean, device-friendly interfaces. On the backend, I used ASP.NET Core to create secure RESTful APIs with JWT-based authentication and real-time stock data integration through external financial APIs with Axios. The system’s data integrity was ensured using well-structured SQL databases. For scalability and maintainability, I containerized the application using Docker and automated testing and deployment pipelines with GitLab CI/CD.</p>
+          <p>I designed and developed a responsive full-stack finance application that helps users track real-time stock market trends and manage personalized investment portfolios. The frontend was built with React, TypeScript, and Tailwind CSS for clean, device-friendly interfaces. On the backend, I used ASP.NET Core to create secure RESTful APIs with JWT-based authentication and real-time stock data integration through external financial APIs with Axios. The system’s data integrity was ensured using well-structured SQL databases. For scalability and maintainability, I containerized the application using Docker and deploymed the app on azure. Azure SQL was used as a database and Azure cache for redis service for user session caching.</p>
           <h5 class="tech-stack">
   <span>React</span>
   <span>TypeScript</span>
   <span>TailwindCSS</span>
   <span>ASP.NET</span>
-  <span>MySQL</span>
+  <span>SQL</span>
   <span>JWT</span>
   <span>Docker</span>
-  <span>GitLab</span>
+  <span>Redis</span>
+  <span>Azure</span>
 </h5>
 
         </div>
